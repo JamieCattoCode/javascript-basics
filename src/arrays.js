@@ -1,61 +1,71 @@
 const getNthElement = (index, array) => {
-  // your code here
+  if (index >= array.length) {
+    index -= array.length;
+  }
+  return array[index];
 };
 
 const arrayToCSVString = array => {
-  // your code here
+  return array.toString();
 };
 
 const csvStringToArray = string => {
-  // your code here
+  return string.split(",");
 };
 
 const addToArray = (element, array) => {
-  // your code here
+  array.push(element);
 };
 
 const addToArray2 = (element, array) => {
-  // your code here
+  return array.concat(element);
 };
 
 const removeNthElement = (index, array) => {
-  // your code here
+  array.splice(index, 1);
 };
 
 const numbersToStrings = numbers => {
-  // your code here
+  return numbers.map(String);
 };
 
 const uppercaseWordsInArray = strings => {
-  // your code here
+  return strings.map(n => n.toUpperCase());
 };
 
 const reverseWordsInArray = strings => {
-  // your code here
+  // eslint-disable-next-line prettier/prettier
+  return strings.map(n => n.split("").reverse().join(""));
 };
 
 const onlyEven = numbers => {
-  // your code here
+  return numbers.filter(n => n % 2 === 0);
 };
 
 const removeNthElement2 = (index, array) => {
-  // your code here
+  return array.filter(n => n !== array[index]);
 };
 
 const elementsStartingWithAVowel = strings => {
-  // your code here
+  // eslint-disable-next-line prettier/prettier
+  return strings.filter(n => (n[0].toLowerCase() === "a" || n[0].toLowerCase() === "e" || 
+  n[0].toLowerCase() === "i" || n[0].toLowerCase() === "o" || n[0].toLowerCase() === "u"));
 };
 
 const removeSpaces = string => {
-  // your code here
+  return string.split(' ').join('');
 };
 
 const sumNumbers = numbers => {
-  // your code here
+  let total = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    total += numbers[i];
+  }
+  return total;
 };
 
 const sortByLastLetter = strings => {
-  // your code here
+  return strings.sort((a, b) => a[a.length - 1].localeCompare(b[b.length - 1]));
 };
 
 module.exports = {

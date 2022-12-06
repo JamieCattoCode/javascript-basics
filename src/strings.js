@@ -1,6 +1,5 @@
 function sayHello (string) {
-  let msg = 'Hello, ' + string + '!';
-  return msg;
+  return `Hello, ${string}!`;
 }
 
 function uppercase (string) {
